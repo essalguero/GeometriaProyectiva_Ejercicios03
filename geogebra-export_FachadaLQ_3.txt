@@ -1,0 +1,31 @@
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki, go to User:Azjps/geogebra */
+import graph; size(0cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -5.04332844630817, xmax = 44.10083610875735, ymin = -5.617431746995283, ymax = 22.847889540743967;  /* image dimensions */
+
+ /* draw figures */
+draw((xmin, 0.037593984962405264*xmin + 4.028522317957263)--(xmax, 0.037593984962405264*xmax + 4.028522317957263), linewidth(2)); /* line */
+draw((xmin, -0.11538461538461559*xmin + 3.639588728600148)--(xmax, -0.11538461538461559*xmax + 3.639588728600148), linewidth(2)); /* line */
+draw((xmin, -66.00000000000072*xmin + 182.07196490078053)--(xmax, -66.00000000000072*xmax + 182.07196490078053), linewidth(2)); /* line */
+draw((3.235334303825873,ymin)--(3.235334303825873,ymax), linewidth(2)); /* line */
+ /* dots and labels */
+dot((0,0),dotstyle); 
+label("$A$", (0.1263823705233976,0.3181621538113323), NE * labelscalefactor); 
+dot((10,0),dotstyle); 
+label("$B$", (10.114774257364633,0.3181621538113323), NE * labelscalefactor); 
+dot((2.708255563617418,3.327097702028909),dotstyle); 
+label("$C$", (2.838884959601689,3.6369888510365365), NE * labelscalefactor); 
+dot((3.235334303825872,3.266280924312549),dotstyle); 
+label("$D$", (3.34947368225172,3.5731652607052826), NE * labelscalefactor); 
+dot((3.235334303825872,4.150151427123647),dotstyle); 
+label("$E$", (3.34947368225172,4.466695525342837), NE * labelscalefactor); 
+dot((2.696092208074146,4.1298791678848605),dotstyle); 
+label("$F$", (2.838884959601689,4.434783730177211), NE * labelscalefactor); 
+dot((-2.542405202262588,3.9329431750150627),dotstyle); 
+label("$G$", (-2.426561242726759,4.243312959183449), NE * labelscalefactor); 
+dot((3.2353343038258724,-31.460099151729423),dotstyle); 
+label("$H$", (17.48639894062446,-5.457872771167148), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* end of picture */

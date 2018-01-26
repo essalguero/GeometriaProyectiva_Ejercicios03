@@ -1,0 +1,31 @@
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki, go to User:Azjps/geogebra */
+import graph; size(0cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -18.748733830226755, xmax = 58.29689000290544, ymin = -10.07364792270974, ymax = 34.55277834946812;  /* image dimensions */
+
+ /* draw figures */
+draw((xmin, 0.10204081632653039*xmin + 3.8697148494353164)--(xmax, 0.10204081632653039*xmax + 3.8697148494353164), linewidth(2)); /* line */
+draw((xmin, -0.14*xmin + 3.7237495024628995)--(xmax, -0.14*xmax + 3.7237495024628995), linewidth(2)); /* line */
+draw((xmin, -86.9999999999993*xmin + 190.87333233774197)--(xmax, -86.9999999999993*xmax + 190.87333233774197), linewidth(2)); /* line */
+draw((xmin, -49.50000000000103*xmin + 128.98785471548152)--(xmax, -49.50000000000103*xmax + 128.98785471548152), linewidth(2)); /* line */
+ /* dots and labels */
+dot((0,0),dotstyle); 
+label("$A$", (0.21249437286227252,0.48260313494668683), NE * labelscalefactor); 
+dot((10,0),dotstyle); 
+label("$B$", (10.218419545996325,0.48260313494668683), NE * labelscalefactor); 
+dot((2.1546118217278436,3.4221038474209995),dotstyle); 
+label("$C$", (2.3637682850860937,3.934647319677934), NE * labelscalefactor); 
+dot((2.537765502694814,3.3684623320856235),dotstyle); 
+label("$D$", (2.7139756661457857,3.8846176938122636), NE * labelscalefactor); 
+dot((2.5224393554561355,4.127106620400227),dotstyle); 
+label("$E$", (2.7139756661457857,4.635062081797317), NE * labelscalefactor); 
+dot((2.146948748108504,4.08879125230353),dotstyle); 
+label("$F$", (2.3637682850860937,4.585032455931647), NE * labelscalefactor); 
+dot((-0.6030608770361232,3.8081780252479565),dotstyle); 
+label("$G$", (-0.38786113752577056,4.284854700737625), NE * labelscalefactor); 
+dot((1.6502794032603538,47.29902425409228),dotstyle); 
+label("$H$", (0.6627610056533049,33.7523043356174), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* end of picture */
